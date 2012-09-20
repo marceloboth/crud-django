@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+	<legend>Editando!</legend>
+	<form action="{% url clientes:update id %}" method="POST">
+		{% csrf_token %}
+		{{ form.as_p }}
+		<input type="submit" value="Salvar" class="btn">
+	</form>
+{% endblock %}

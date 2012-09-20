@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <a href="{% url clientes:create %}" class="btn btn-primary">Cadastrar</a>
+
+    {% if clientes.count > 0 %}
+    <legend>Listando meus registros!</legend>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Sobre nome</th>
+            <th>Data de nascimento</th>
+            <th>Ações</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for cliente in clientes %}
+            <tr>
+                <td>{{ cliente.nome }}</td>
+                <td>{{ cliente.sobre_nome }}</td>
+                <td>{{ cliente.data_nascimento }}</td>
+                <td><a href="{% url clientes:update cliente.id %}" class="btn btn-small"><i class="icon-edit"
+                                                                                            title="Alterar"></i></a>
+                    <a href="{% url clientes:delete cliente.id %}" class="btn btn-small"><i class="icon-remove"
+                                                                                            title="Excluir"></i></a>
+                </td>
+
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+{% endblock %}

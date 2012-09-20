@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<legend>Excluir?</legend>
+    <p>{{ cliente.nome }}</p>
+    <p>{{ cliente.sobre_nome }}</p>
+    <p>{{ cliente.data_nascimento }}</p>
+    <form action="{% url clientes:delete cliente.id %}" method="POST">
+        {% csrf_token %}
+        <input type="submit" class="btn btn-danger" value="Sim">
+        <a href="{% url clientes:list %}" class="btn">Cancelar</a>
+    </form>
+{% endblock %}
