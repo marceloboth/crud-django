@@ -1,1 +1,11 @@
 CRUD básico usando Django 1.4 e Twitter Bootstrap.
+
+Use o virtualenvwrapper para gerenciar os seus ambientes:
+http://www.doughellmann.com/projects/virtualenvwrapper/
+
+Para entender um pouco mais sobre virtualenv, pip e pacotes Python:
+http://hltbra.blogspot.com.br/2010/05/gerenciando-ambientes-virtuais-e.html
+
+Para o projeto funcionar, após as configuração do virtualenv, instalação do pip e criação de um ambiente , instale o Django e o South:
+- pip install django==1.4.1
+- pip install south

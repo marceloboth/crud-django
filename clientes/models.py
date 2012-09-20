@@ -9,7 +9,7 @@ class Cliente(models.Model):
     nome = models.CharField(max_length=50)
     sobre_nome = models.CharField(max_length=50)
     data_nascimento = models.DateTimeField()
-
+    profissao = models.ForeignKey('Profissao')
 
     def __unicode__(self):
         return self.nome

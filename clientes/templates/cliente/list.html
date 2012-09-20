@@ -11,6 +11,7 @@
             <th>Nome</th>
             <th>Sobre nome</th>
             <th>Data de nascimento</th>
+            <th>Profissão</th>
             <th>Ações</th>
         </tr>
         </thead>
@@ -20,6 +21,7 @@
                 <td>{{ cliente.nome }}</td>
                 <td>{{ cliente.sobre_nome }}</td>
                 <td>{{ cliente.data_nascimento }}</td>
+                <td>{{ cliente.profissao.nome }}</td>
                 <td><a href="{% url clientes:update cliente.id %}" class="btn btn-small"><i class="icon-edit"
                                                                                             title="Alterar"></i></a>
                     <a href="{% url clientes:delete cliente.id %}" class="btn btn-small"><i class="icon-remove"
