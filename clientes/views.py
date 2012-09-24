@@ -5,10 +5,12 @@ from django.http import HttpResponseRedirect
 from forms import ClienteForm
 from clientes.models import Cliente
 
+
 def list(request):
 	clientes = Cliente.objects.all()
 	context = RequestContext(request, {'clientes': clientes})
 	return render_to_response('cliente/list.html', context)
+
 
 def create(request):
 	form = ClienteForm(request.POST or None)

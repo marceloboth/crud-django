@@ -1,9 +1,11 @@
 {% extends "base.html" %}
+{% load bootstrap_toolkit %}
+
 {% block content %}
 <legend>Cadastrando</legend>
 <form action="{% url clientes:create %}" method="POST">
 	{% csrf_token %}
-	{{ form.as_p }}
+	{{ form|as_bootstrap }}
 	<input type="submit" value="Salvar" class="btn">
 </form>
 
