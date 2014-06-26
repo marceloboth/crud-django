@@ -8,8 +8,8 @@ http://hltbra.blogspot.com.br/2010/05/gerenciando-ambientes-virtuais-e.html
 
 2) Para o projeto funcionar, após as configuração do virtualenv, instalação do pip e criação de um ambiente,
 instale o Django e o South:
-  
-  pip install django==1.4.1
+
+	pip install django==1.4.1
 
   pip install south
 
